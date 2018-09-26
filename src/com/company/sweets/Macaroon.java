@@ -8,4 +8,8 @@ public class Macaroon extends Sweets {
         super(name, weight, price);
         this.flavor = flavor;
     }
+
+    public Macaroon(String name) {
+        super(name);
+    }
 }

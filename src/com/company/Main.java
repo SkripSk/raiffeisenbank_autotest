@@ -8,11 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Candy candy = new Candy("Candy",12.0,0.3,"Sandt");
-        Lollipop lollipop = new Lollipop("Lollipop", 80.0, 2.0, "pink");
-        Jellybean jellybean = new Jellybean("Jellybean", 50.0, 1.0, 10);
-        Cookie cookie = new Cookie("Cookie", 100.0, 2.5,"Gingery-snap");
-        Macaroon macaroon = new Macaroon("Macaroon", 25.0,1.0,"Mint");
+        Candy candy = new Candy("Candy");
+        Lollipop lollipop = new Lollipop("Lollipop");
+        Jellybean jellybean = new Jellybean("Jellybean");
+        Cookie cookie = new Cookie("Cookie"");
+        Macaroon macaroon = new Macaroon("Macaroon");
 
         int countCandy;
         int countLollypop;

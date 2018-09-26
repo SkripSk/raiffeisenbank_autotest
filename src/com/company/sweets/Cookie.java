@@ -7,4 +7,8 @@ public class Cookie extends Sweets {
         super(name, wight, price);
         this.species = species;
     }
+
+    public Cookie(String name) {
+        super(name);
+    }
 }

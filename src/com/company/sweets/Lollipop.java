@@ -8,4 +8,8 @@ public class Lollipop extends Sweets {
         super(name, weight, price);
         this.color = color;
     }
+
+    public Lollipop(String name) {
+        super(name);
+    }
 }

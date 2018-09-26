@@ -9,4 +9,7 @@ public class Candy extends Sweets{
         this.flavor = flavor;
     }
 
+    public Candy(String name) {
+        super(name);
+    }
 }

@@ -8,4 +8,8 @@ public class Jellybean extends Sweets {
         super(name, weight, price);
         this.size = size;
     }
+
+    public Jellybean(Sring name) {
+        super(name);
+    }
 }

@@ -12,6 +12,10 @@ public abstract class Sweets {
         this.weight = weight;
     }
 
+    public Sweets(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
