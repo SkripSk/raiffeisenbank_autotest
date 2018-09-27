@@ -12,4 +12,12 @@ public class Candy extends Sweets{
     public Candy(String name) {
         super(name);
     }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
 }

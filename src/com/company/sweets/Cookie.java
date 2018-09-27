@@ -11,4 +11,12 @@ public class Cookie extends Sweets {
     public Cookie(String name) {
         super(name);
     }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
 }

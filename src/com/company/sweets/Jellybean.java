@@ -9,7 +9,15 @@ public class Jellybean extends Sweets {
         this.size = size;
     }
 
-    public Jellybean(Sring name) {
+    public Jellybean(String name) {
         super(name);
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }

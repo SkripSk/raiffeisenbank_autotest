@@ -12,4 +12,12 @@ public class Macaroon extends Sweets {
     public Macaroon(String name) {
         super(name);
     }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
 }

@@ -12,4 +12,12 @@ public class Lollipop extends Sweets {
     public Lollipop(String name) {
         super(name);
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
