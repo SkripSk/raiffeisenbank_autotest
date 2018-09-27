@@ -9,8 +9,9 @@ public class Candy extends Sweets{
         this.flavor = flavor;
     }
 
-    public Candy(String name) {
-        super(name);
+    public Candy() {
+        super("Candy", 20.0, 0.3);
+        this.flavor = "Strawberry";
     }
 
     public void setFlavor(String flavor) {

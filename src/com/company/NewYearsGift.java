@@ -5,6 +5,11 @@ public class NewYearsGift {
     private double totalPrice;
     private double totalWeight;
 
+    public NewYearsGift() {
+        this.totalPrice = 0.0;
+        this.totalWeight = 0.0;
+    }
+
     public double getTotalPrice() {
         return totalPrice;
     }
@@ -14,10 +19,10 @@ public class NewYearsGift {
     }
 
     public void setTotalPrice(int count, double price) {
-        this.totalPrice = count * price;
+        this.totalPrice += count * price;
     }
 
     public void setTotalWeight(int count, double weight) {
-        this.totalWeight = count * weight;
+        this.totalWeight += count * weight;
     }
 }

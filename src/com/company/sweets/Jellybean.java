@@ -2,22 +2,23 @@ package com.company.sweets;
 
 public class Jellybean extends Sweets {
 
-    private int size;
+    private String color;
 
-    public Jellybean (String name, double weight, double price, int size) {
+    public Jellybean (String name, double weight, double price, String color) {
         super(name, weight, price);
-        this.size = size;
+        this.color = color;
     }
 
-    public Jellybean(String name) {
-        super(name);
+    public Jellybean() {
+        super("Jellybean", 80.0, 1.8);
+        this.color = "Varicoloured";
     }
 
-    public int getSize() {
-        return size;
+    public String getColor() {
+        return color;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setColor(String color) {
+        this.color = color;
     }
 }

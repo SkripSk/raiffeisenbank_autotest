@@ -14,11 +14,6 @@ public abstract class Sweets {
         this.isNewYearsGift = true;
     }
 
-    public Sweets(String name) {
-        this.name = name;
-        this.isNewYearsGift = true;
-    }
-
     public String getName() {
         return name;
     }

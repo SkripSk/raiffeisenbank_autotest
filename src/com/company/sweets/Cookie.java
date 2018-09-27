@@ -8,8 +8,9 @@ public class Cookie extends Sweets {
         this.species = species;
     }
 
-    public Cookie(String name) {
-        super(name);
+    public Cookie() {
+        super("Cookie", 80.0, 0.5);
+        this.species = "Ginger-snap";
     }
 
     public String getSpecies() {

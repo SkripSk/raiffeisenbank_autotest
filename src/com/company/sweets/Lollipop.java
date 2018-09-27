@@ -4,13 +4,14 @@ public class Lollipop extends Sweets {
 
     private String color;
 
-    public Lollipop (String name, double weight, double price, String color) {
+    public Lollipop(String name, double weight, double price, String color) {
         super(name, weight, price);
         this.color = color;
     }
 
-    public Lollipop(String name) {
-        super(name);
+    public Lollipop() {
+        super("Lollipop", 150.0, 2.2);
+        this.color = "Pink";
     }
 
     public String getColor() {
