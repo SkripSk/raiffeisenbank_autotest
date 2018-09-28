@@ -21,4 +21,9 @@ public class Macaroon extends Sweets {
     public void setFlavor(String flavor) {
         this.flavor = flavor;
     }
+
+    @Override
+    public String getChildFild() {
+        return this.flavor;
+    }
 }

@@ -45,5 +45,9 @@ public abstract class Sweets {
     public void setNewYearsGift(boolean newYearsGift) {
         isNewYearsGift = newYearsGift;
     }
+
+    public String getChildFild(){
+        return "";
+    }
 }
 

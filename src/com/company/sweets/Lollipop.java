@@ -21,4 +21,9 @@ public class Lollipop extends Sweets {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String getChildFild() {
+        return this.color;
+    }
 }

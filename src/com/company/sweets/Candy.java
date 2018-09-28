@@ -18,7 +18,8 @@ public class Candy extends Sweets{
         this.flavor = flavor;
     }
 
-    public String getFlavor() {
-        return flavor;
+    @Override
+    public String getChildFild() {
+        return this.flavor;
     }
 }

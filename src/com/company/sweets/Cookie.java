@@ -20,4 +20,9 @@ public class Cookie extends Sweets {
     public void setSpecies(String species) {
         this.species = species;
     }
+
+    @Override
+    public String getChildFild() {
+        return this.species;
+    }
 }

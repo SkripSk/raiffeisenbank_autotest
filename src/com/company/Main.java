@@ -51,7 +51,8 @@ public class Main {
             if (sweets[i].isNewYearsGift()){
                 System.out.println((i + 1) + ". " + sweets[i].getName()
                 + "\n Вес: " + sweets[i].getWeight()
-                + "\n Цена: $" + sweets[i].getPrice());
+                + "\n Цена: $" + sweets[i].getPrice()
+                + "\n Вид: " + sweets[i].getChildFild());
             }
         }
 
