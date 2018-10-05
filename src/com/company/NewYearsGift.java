@@ -2,8 +2,7 @@ package com.company;
 
 import com.company.sweets.Sweets;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class NewYearsGift {
 
@@ -18,19 +17,19 @@ public class NewYearsGift {
     }
 
 
-    List<Sweets> sweetsList = new ArrayList<>();
+    HashMap<Sweets, Integer> sweetMap = new HashMap<>();
 
-    public List<Sweets> getSweetsList() {
-        return sweetsList;
+    public HashMap<Sweets, Integer> getSweetMap() {
+        return sweetMap;
     }
 
-    public void setSweetsList(List<Sweets> sweetsList) {
-        this.sweetsList = sweetsList;
+    public void setSweetsMap(HashMap<Sweets, Integer> sweetsMap) {
+        this.sweetMap = sweetsMap;
     }
 
-    public void setSweetsList(Sweets sweets) {
-        sweetsList.add(sweets);
-        this.sweetsList = sweetsList;
+    public void setSweetsList(Sweets sweets, int i) {
+        sweetMap.put(sweets, i);
+        this.sweetMap = sweetMap;
     }
 
     public double getTotalPrice() {

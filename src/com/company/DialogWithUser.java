@@ -1,14 +1,10 @@
 package com.company;
 
-import com.company.sweets.*;
-
 import java.util.*;
 
 public class DialogWithUser {
 
     public int generalMenu() {
-
-        Scanner scanner = new Scanner(System.in);
 
         HashMap<Integer, String> menuMap = new HashMap<>();
         menuMap.put(1, "Создать новый подарок");
@@ -18,14 +14,22 @@ public class DialogWithUser {
 
         showMenu("Выберете действие (1,2,3 или 4):", menuMap);
 
-        int action = scanner.nextInt();
+        return getAction();
+    }
 
+    private int getAction() {
+        Scanner scanner = new Scanner(System.in);
+        int action = -1;
+        try {
+            action = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Необходимо ввести номер действия, без точки. Попробуй еще.");
+            scanner.next();
+        }
         return action;
     }
 
     public int createNewYearsGiftMenu() {
-
-        Scanner scanner = new Scanner(System.in);
 
         HashMap<Integer, String> menuMap = new HashMap<>();
         menuMap.put(1, "Добавить сладость в подарок");
@@ -34,18 +38,34 @@ public class DialogWithUser {
         menuMap.put(4, "Выйти из меню (вернуться в основное меню)");
         menuMap.put(5, "Выйти из программы");
 
-        showMenu( " Создание нового подарка\nВыберете действие (1,2,3,4 или 5):", menuMap);
+        showMenu(" Создание нового подарка\nВыберете действие (1,2,3,4 или 5):", menuMap);
 
-        int action = scanner.nextInt();
+        return getAction();
+    }
 
-        return action;
+    public String[] createSweetsMenu() {
+
+        Scanner scanner = new Scanner(System.in);
+
+        HashMap<Integer, String> menuMap = new HashMap<>();
+        menuMap.put(1, "Candy");
+        menuMap.put(2, "Lollipop");
+        menuMap.put(3, "Jellybean");
+        menuMap.put(4, "Cookie");
+        menuMap.put(5, "Macaroon");
+
+        showMenu(" Доступные сладости\nВыберете сладости для подарка (введите цифры чере пробел):", menuMap);
+
+        String[] sweetsKeyList = scanner.nextLine().split(" ");
+
+        return sweetsKeyList;
     }
 
     private void showMenu(String header, HashMap<Integer, String> menuMap) {
 
         System.out.println(header);
 
-        for(Map.Entry m : menuMap.entrySet()) {
+        for (Map.Entry m : menuMap.entrySet()) {
             System.out.println(m.getKey() + ". " + m.getValue());
         }
     }
