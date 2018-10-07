@@ -3,6 +3,7 @@ package com.company;
 import com.company.sweets.Sweets;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class NewYearsGift {
 
@@ -25,6 +26,12 @@ public class NewYearsGift {
 
     public void setSweetsMap(HashMap<Sweets, Integer> sweetsMap) {
         this.sweetMap = sweetsMap;
+        for (Map.Entry<Sweets, Integer> entry : sweetMap.entrySet()) {
+            this.totalWeight += entry.getKey().getWeight() * entry.getValue();
+        }
+        for (Map.Entry<Sweets, Integer> entry : sweetMap.entrySet()) {
+            this.totalPrice += entry.getKey().getPrice() * entry.getValue();
+        }
     }
 
     public void setSweetsList(Sweets sweets, int i) {
@@ -40,19 +47,11 @@ public class NewYearsGift {
         return totalWeight;
     }
 
-    public void setTotalPrice(int count, double price) {
-        this.totalPrice += count * price;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setTotalWeight(int count, double weight) {
-        this.totalWeight += count * weight;
     }
 }
