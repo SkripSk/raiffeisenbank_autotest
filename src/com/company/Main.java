@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.annotation.KindOf;
 import com.company.sweets.*;
 
 import java.util.*;
@@ -50,11 +51,12 @@ public class Main {
                 NewYearsGift gift = newYearsGiftList.get(i);
                 for (Map.Entry<Sweets, Integer> entry : gift.getSweetMap().entrySet()){
                     System.out.println(entry.getKey().getName() + " удалить?");
+                    //TODO переписать метод удаления. этот выдает ошибку
                     deleteFlg = scanner.next();
-                    if (deleteFlg.equals("y")){
-                        gift.getSweetMap().remove(entry.getKey());
-                        System.out.println("Сладость удалена");
-                    }
+//                    if (deleteFlg.equals("y")){
+//                        gift.getSweetMap().remove(entry.getKey());
+//                        System.out.println("Сладость удалена");
+//                    }
                 }
             }
         }
@@ -70,11 +72,14 @@ public class Main {
             } else {
                 NewYearsGift gift = newYearsGiftList.get(i);
                 System.out.println("\nПодарок для " + gift.getName());
-                System.out.println("Общий вес подарка: " + gift.getTotalWeight()
-                        + "\nОбщая стоимость подарка: " + gift.getTotalPrice()
-                        + "\nВиды сладостей: " + gift.getSweetMap().size() + ":");
-                for (Map.Entry<Sweets, Integer> entry : gift.getSweetMap().entrySet()){
-                    System.out.println(entry.getKey().getName() + ": " + entry.getValue());
+                System.out.println("Общий вес подарка: " + gift.getTotalWeight() + "гр."
+                        + "\nОбщая стоимость подарка: $" + gift.getTotalPrice()
+                        + "\nВиды сладостей - " + gift.getSweetMap().size() + ":");
+                for (Map.Entry<Sweets, Integer> entry : gift.getSweetMap().entrySet()) {
+                    System.out.println(entry.getKey().getName() + ": " + entry.getValue() + "шт.");
+                    System.out.println("Цена за шт.: $" + entry.getKey().getPrice()
+                            + "\nВес шт.: " + entry.getKey().getWeight()
+                    + "\nВид: " + entry.getKey().getClass().getAnnotation(KindOf.class).kindOf());
                 }
             }
         }
@@ -124,12 +129,6 @@ public class Main {
                     break;
             }
         }
-
-        /*for (Map.Entry<Sweets, Integer> entry : sweetsMap.entrySet()) {
-            System.out.print(entry.getValue());
-        }*/
-
-
         return sweetsMap;
     }
 }

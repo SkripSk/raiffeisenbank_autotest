@@ -1,5 +1,8 @@
 package com.company.sweets;
 
+import com.company.annotation.KindOf;
+
+@KindOf(kindOf = "Mint")
 public class Macaroon extends Sweets {
 
     private String flavor;
@@ -11,7 +14,6 @@ public class Macaroon extends Sweets {
 
     public Macaroon() {
         super("Macaroon",50.0,1.0);
-        this.flavor = "Mint";
     }
 
     public String getFlavor() {
@@ -20,10 +22,5 @@ public class Macaroon extends Sweets {
 
     public void setFlavor(String flavor) {
         this.flavor = flavor;
-    }
-
-    @Override
-    public String getChildFild() {
-        return this.flavor;
     }
 }

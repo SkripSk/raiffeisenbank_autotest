@@ -1,5 +1,8 @@
 package com.company.sweets;
 
+import com.company.annotation.KindOf;
+
+@KindOf(kindOf = "Varicoloured")
 public class Jellybean extends Sweets {
 
     private String color;
@@ -11,7 +14,6 @@ public class Jellybean extends Sweets {
 
     public Jellybean() {
         super("Jellybean", 80.0, 1.8);
-        this.color = "Varicoloured";
     }
 
     public String getColor() {
@@ -20,10 +22,5 @@ public class Jellybean extends Sweets {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    @Override
-    public String getChildFild() {
-        return this.color;
     }
 }

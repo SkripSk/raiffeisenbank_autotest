@@ -5,13 +5,11 @@ public abstract class Sweets {
     private String name;
     private double weight;
     private double price;
-    private boolean isNewYearsGift;
 
     public Sweets (String name, double weight, double price) {
         this.name = name;
         this.price = price;
         this.weight = weight;
-        this.isNewYearsGift = true;
     }
 
     public String getName() {
@@ -36,18 +34,6 @@ public abstract class Sweets {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public boolean isNewYearsGift() {
-        return isNewYearsGift;
-    }
-
-    public void setNewYearsGift(boolean newYearsGift) {
-        isNewYearsGift = newYearsGift;
-    }
-
-    public String getChildFild(){
-        return "";
     }
 }
 
