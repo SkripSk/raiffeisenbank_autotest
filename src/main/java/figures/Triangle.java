@@ -16,7 +16,7 @@ public class Triangle extends Figure{
 
     @Override
     public double area() {
-        return sqrt(perimeter() * (perimeter() - side1) * (perimeter() - side2) * (perimeter() - side3));
+        return sqrt((side1 + side2 - side3) * (side1 - side2 + side3) * (- side1 + side2 + side3) * (side1 + side2 + side3)) / 4;
     }
 
     @Override

@@ -17,6 +17,6 @@ public class Circle extends Figure{
 
     @Override
     public double perimeter() {
-        return 2 * PI * pow(radius, 2);
+        return 2 * PI * radius;
     }
 }
