@@ -6,13 +6,21 @@ public class Rectangle extends Figure {
     private double b;
 
     public Rectangle(double a) {
-        this.a = a;
-        this.b = a;
+        if (a <= 0)
+            throw new IllegalFigureParamExeption("Стороны должны быть положительные");
+        else {
+            this.a = a;
+            this.b = a;
+        }
     }
 
     public Rectangle(double a, double b) {
-        this.a = a;
-        this.b = b;
+        if (a <= 0 || b <= 0)
+            throw new IllegalFigureParamExeption("Стороны должны быть положительные");
+        else {
+            this.a = a;
+            this.b = b;
+        }
     }
 
     @Override
